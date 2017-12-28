@@ -41,4 +41,6 @@ class MoviesController < ApplicationController
     )
     redirect_to :back
   end
+
+  
 end

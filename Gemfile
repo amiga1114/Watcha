@@ -1,11 +1,19 @@
 source 'https://rubygems.org'
 
+ruby '2.3.5'
+
+gem 'rails_12factor', group: :production
+gem 'pg'
+
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
+
 gem 'devise'
 gem 'devise-i18n'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.9'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -48,4 +56,5 @@ group :development do
   gem 'pry-rails'
   gem 'awesome_print'
   gem 'meta_request'
+  gem 'sqlite3'
 end
