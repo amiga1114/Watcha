@@ -20,6 +20,9 @@ class AdminController < ApplicationController
 
   def reviews_destroy
     # 특정 review을 지운다
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to :back
   end
 
   def to_manager

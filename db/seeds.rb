@@ -8,19 +8,19 @@
 
 # JSON 파일 watcha_box.json 파일들에 들어있는
 # 영화 정보를 읽어와서
-# movies = JSON.parse(File.read('watcha_box.json'))
-#
-# list = movies["cards"]
-#
-# list.each do |movie|
-#   Movie.create(
-#     title: movie["items"][0]["item"]["title"],
-#     poster: movie["items"][0]["item"]["poster"]["original"],
-#     genre: movie["items"][0]["item"]["main_genre"],
-#     nation: movie["items"][0]["item"]["nation"],
-#     director: movie["items"][0]["item"]["directors"][0]["name"]
-#   )
-# end
+movies = JSON.parse(File.read('watcha_box.json'))
+
+list = movies["cards"]
+
+list.each do |movie|
+  Movie.create(
+    title: movie["items"][0]["item"]["title"],
+    remote_poster_url: movie["items"][0]["item"]["poster"]["original"],
+    genre: movie["items"][0]["item"]["main_genre"],
+    nation: movie["items"][0]["item"]["nation"],
+    director: movie["items"][0]["item"]["directors"][0]["name"]
+  )
+end
 
 
   User.create(
