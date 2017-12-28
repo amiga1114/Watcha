@@ -64,3 +64,10 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname]) # 추가할 유저 정보를
   end
 end
+---
+
+## 4. 사진 업로드
+
+## 5. 유저 역할 구분 / 관리자 페이지
+- User model -> :role, :string, default: "user" (유저는 3개의 역할군으로 나눠져 있다.)
+- role = ["user", "manager", "admin"]
