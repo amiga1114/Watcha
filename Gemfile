@@ -4,6 +4,7 @@ ruby '2.3.5'
 
 gem 'rails_12factor', group: :production
 gem 'pg'
+gem 'simple_form'
 
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
